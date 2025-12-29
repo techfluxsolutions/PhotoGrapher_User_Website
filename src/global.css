@@ -4,10 +4,13 @@
 
 :root {
     /* Button */
-  --primary-color: #4b0f0f;
+  --primary-color:#4A3326;
+
 
   /* Section background */
-  --secondary-color: #f3e7d8;
+  --secondary-color: #FAF9F6;
+  --tertiary-color: #e6dccf;
+
   --text-color: #000000;
   --white-color: #ffffff;
 
