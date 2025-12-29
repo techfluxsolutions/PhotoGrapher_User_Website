@@ -1,0 +1,29 @@
+/* ================================
+   GLOBAL THEME VARIABLES
+================================ */
+
+:root {
+    /* Button */
+  --primary-color: #4b0f0f;
+
+  /* Section background */
+  --secondary-color: #f3e7d8;
+  --text-color: #000000;
+  --white-color: #ffffff;
+  --border-radius: 4px;
+}
+
+/* ================================
+   GLOBAL RESETS (optional)
+================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  color: var(--text-color);
+}

@@ -8,6 +8,7 @@ import AuthModule from "../AuthModule/AuthModule";
 import SignIn from "../AuthModule/SignIn/SignIn";
 import SignUp from "../AuthModule/SignUp/SignUp";
 import VerifyOTP from "../AuthModule/VerifyOTP/VerifyOTP";
+import Footer from "../Template/Layout/Footer/Footer";
 
 // import Header from "./components/Header/Header";
 // import Footer from "./components/Footer/Footer";
@@ -96,7 +97,7 @@ const AppRoutes = () => {
  
            </Routes>
  
-           {/* <Footer /> */}
+           <Footer />
  
  
          </BrowserRouter>
