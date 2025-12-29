@@ -1,11 +1,19 @@
 .custom-navbar {
-  background-color: var(--secondary-color);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: transparent;
   height: 70px;
+  overflow: visible;
+  z-index: 1000;
 }
 
 .navbar-brand {
   font-size: 20px;
   font-weight: 600;
+  z-index: 10;
+  position: relative;
 }
 
 .nav-link {
@@ -22,15 +30,56 @@
   text-underline-offset: 6px;
 }
 
+.navbar-right-section {
+  z-index: 10;
+  position: relative;
+}
+
 .login-btn {
- background-color: var(--primary-color) !important;
-  color: var(--white-color) !important;
-  padding: 6px 18px;
+  background-color: var(--white-color) !important;
+  color: var(--text-color) !important;
+  padding: 8px 20px;
   border-radius: var(--border-radius);
-  border: none;
+  border: 1px solid var(--text-color);
+  font-weight: 500;
+  font-size: 14px;
 }
 
 .login-btn:hover {
-  background-color: #3a0c0c; /* slightly darker */
-  color: var(--white-color);
+  background-color: var(--text-color) !important;
+  color: var(--white-color) !important;
+}
+
+.quote-btn {
+  background-color: var(--primary-color) !important;
+  color: var(--white-color) !important;
+  padding: 8px 20px;
+  border-radius: var(--border-radius);
+  border: none;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.quote-btn:hover {
+  background-color: #3a0c0c !important;
+  color: var(--white-color) !important;
+}
+
+/* Ensure navbar content is above the image */
+.navbar .container-fluid {
+  position: relative;
+  z-index: 10;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .custom-navbar {
+    background-color: var(--secondary-color);
+  }
+}
+
+@media (max-width: 768px) {
+  .custom-navbar {
+    background-color: var(--secondary-color);
+  }
 }

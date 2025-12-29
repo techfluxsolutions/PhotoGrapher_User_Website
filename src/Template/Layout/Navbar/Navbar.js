@@ -16,6 +16,7 @@
 
 import "./Navbar.css";
 
+
 const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg custom-navbar">
@@ -40,23 +41,24 @@ const Navbar = () => {
         <div className="collapse navbar-collapse justify-content-center" id="navbarContent">
           <ul className="navbar-nav gap-4">
             <li className="nav-item">
-              <a className="nav-link" href="#">Home</a>
+              <a className="nav-link active-link" href="#">Home</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link active-link" href="#">Services</a>
+              <a className="nav-link" href="#">Services</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#">Join Us</a>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#">About Us</a>
             </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">Get a Quote</a>
-            </li>
           </ul>
         </div>
 
-        {/* Login Button */}
-        <div className="d-none d-lg-block">
+        {/* Right Section - Login Button and Get a Quote Button */}
+        <div className="navbar-right-section d-none d-lg-flex align-items-center gap-3">
           <button className="btn login-btn">Login</button>
+          <button className="btn quote-btn">Get a Quote</button>
         </div>
 
       </div>
