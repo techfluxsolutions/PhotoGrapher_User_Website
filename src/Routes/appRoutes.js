@@ -128,6 +128,7 @@ import SignUp from "../AuthModule/SignUp/SignUp";
 import VerifyOTP from "../AuthModule/VerifyOTP/VerifyOTP";
 import Login from "../AuthModule/Login/Login";
 import LandingPage from "../Pages/LandingPage/LandingPage";
+import PersonalizedQuotePage from "../Pages/PersonalizedQuotePage/PersonalizedQuotePage";
 
 /* ================================
    Layout Component
@@ -213,6 +214,8 @@ const AppRoutes = () => {
 
             {/* Normal Pages (WITH Navbar & Footer) */}
             <Route path="/landingPage" element={<LandingPage />} />
+            <Route path="/personalizedQuotePage" element={<PersonalizedQuotePage />} />
+
           </Routes>
         </Layout>
       </BrowserRouter>

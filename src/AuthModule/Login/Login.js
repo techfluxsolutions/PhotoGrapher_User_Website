@@ -78,7 +78,7 @@ const Login = () => {
     <div className="login-wrapper">
       <div className="login-card text-center">
 
-        <h2 className="login-title">LOGIN TO YOUR ACCOUNT</h2>
+        <h1 className="title">Login to your Account</h1>
 
         {/* Phone + Verify */}
         <div className="form-group phone-verify-group text-start">

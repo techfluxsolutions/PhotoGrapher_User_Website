@@ -8,15 +8,15 @@
 
 .login-card {
   width: 100%;
-  max-width: 420px;
+  max-width: 480px;
   padding: 40px 30px;
 }
 
 .login-title {
-  font-size: 20px;
-  font-weight: 600;
+  font-size: 25px;
+  font-weight: 700;
   margin-bottom: 40px;
-  color: var(--text-color);
+  color: var(--primary-color);
 }
 
 .form-group {

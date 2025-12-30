@@ -38,3 +38,10 @@ body {
   font-family: var(--primary-font-family);
   color: var(--text-color);
 }
+
+.title{
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: var(--primary-color);
+}
