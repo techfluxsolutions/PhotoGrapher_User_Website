@@ -24,6 +24,49 @@
     padding: 60px 80px;
 }
 
+/* Slider Arrow Buttons */
+.slider-arrow {
+    position: absolute;
+    background-color: #4A3326;
+    color: var(--white-color);
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.slider-arrow:hover {
+    background-color: #5d4233;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.slider-arrow-left {
+    left: 50%;
+    transform: translateX(-200px);
+    top: 70%;
+}
+
+.slider-arrow-left:hover {
+    transform: translateX(-200px) scale(1.1);
+}
+
+.slider-arrow-right {
+    left: 50%;
+    transform: translateX(150px);
+    top: 70%;
+}
+
+.slider-arrow-right:hover {
+    transform: translateX(150px) scale(1.1);
+}
+
 /* Testimonials Grid */
 .testimonials-grid {
     display: grid;
@@ -33,6 +76,7 @@
     width: 100%;
     padding-top: 30px;
     padding-bottom: 30px;
+    transition: opacity 0.3s ease;
 }
 
 /* Individual Testimonial Card */

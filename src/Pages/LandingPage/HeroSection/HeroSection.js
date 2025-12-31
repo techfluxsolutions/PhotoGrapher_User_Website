@@ -10,12 +10,16 @@ const HeroSection = () => {
           <h1 className="hero-title">
             One-Stop Photography Studio
           </h1>
-          <p className="hero-subtitle">
-            Tap. Book. Shoot. Done. Everything delivered without the hassle.
-            Tap. Book. Shoot. Done. Everything delivered without the hassle.
-            Tap. Book. Shoot. Done. Everything delivered without the hassle.
-            Tap. Book. Shoot. Done. Everything delivered without the hassle.
-          </p>
+          <div className="hero-subtitle-container">
+            <p className="hero-subtitle">
+              Tap. Book. Shoot. Done. Everything delivered without the hassle.
+              Tap. Book. Shoot. Done. Everything delivered without the hassle.
+              Tap. Book. Shoot. Done. Everything delivered without the hassle.
+              Tap. Book. Shoot. Done. Everything delivered without the hassle.
+              Tap. Book. Shoot. Done. Everything delivered without the hassle.
+              Tap. Book. Shoot. Done. Everything delivered without the hassle.
+            </p>
+          </div>
           <div className="hero-buttons">
             <button className="btn-secondary hero-btn">Explore Services</button>
             <button className="btn-primary hero-btn">Get a Quote</button>

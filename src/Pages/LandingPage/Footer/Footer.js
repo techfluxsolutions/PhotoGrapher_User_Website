@@ -59,9 +59,6 @@ const Footer = () => {
       <div className="footer-copyright">
         <p>© xyz. All Rights Reserved.</p>
       </div>
-
-      {/* Blue Bottom Line */}
-      <div className="footer-blue-line"></div>
     </footer>
   );
 };

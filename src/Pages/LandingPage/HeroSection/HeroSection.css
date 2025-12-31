@@ -9,7 +9,7 @@
     /* Pull up to account for navbar in flow */
     padding-top: 70px;
     /* Push content back down */
-    background-color: #F5F0EC;
+    background-color: var(--white-color);
     display: flex;
     align-items: center;
     overflow: hidden;
@@ -18,7 +18,7 @@
 .hero-content-wrapper {
     max-width: 1400px;
     margin: 0 auto;
-    padding: 60px 60px;
+    padding: 40px 80px;
     width: 100%;
     display: flex;
     align-items: center;
@@ -29,27 +29,34 @@
 /* Left Side - Text Content */
 .hero-text-container {
     flex: 0 0 auto;
-    max-width: 560px;
+    max-width: 545px;
     text-align: left;
-    background-color: var(--white-color);
-    padding: 60px 50px;
-    padding-right: 80px;
-    border-radius: 32px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
     position: relative;
     z-index: 2;
-    margin-right: -60px;
 }
 
 .hero-title {
     font-family: var(--primary-font-family);
-    font-size: 40px;
-    font-weight: 500;
+    font-size: 55px;
+    font-weight: 600;
     line-height: 1.1;
     color: var(--primary-color);
-    margin: 0 0 20px 0;
-    letter-spacing: -1px;
+    /* margin: 0 0 20px 0;   */
+    letter-spacing: 2px;
     text-align: left;
+    padding: 0px 40px;
+}
+
+.hero-subtitle-container {
+    background-color: var(--white-color);
+    padding: 10px 40px;
+    padding-right: 200px;
+    border-radius: 12px;
+    /* box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08); */
+    margin-right: -240px;
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 3;
 }
 
 .hero-subtitle {
@@ -57,7 +64,7 @@
     font-size: 16px;
     font-weight: 300;
     color: var(--primary-color);
-    margin: 0 0 40px 0;
+    margin: 0;
     line-height: 1.6;
     text-align: left;
     opacity: 0.7;
@@ -68,13 +75,13 @@
     gap: 20px;
     flex-wrap: wrap;
     align-items: flex-start;
-    padding: 0;
+    padding: 0 40px;
     margin: 0;
 }
 
 .hero-btn {
     padding: 20px 48px;
-    font-size: 22px;
+    font-size: 12px;
     font-family: var(--tertiary-font-family);
     font-weight: 500;
     border-radius: 16px;
