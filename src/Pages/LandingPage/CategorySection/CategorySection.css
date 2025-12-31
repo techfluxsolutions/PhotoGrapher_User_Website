@@ -15,7 +15,7 @@
 
 .category-title {
     font-family: var(--primary-font-family);
-    font-size: 48px;
+    font-size: 32px;
     font-weight: 400;
     color: var(--white-color);
     margin: 0;
@@ -28,7 +28,7 @@
 }
 
 .category-grid {
-    max-width: 1500px;
+    max-width: 1100px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -95,7 +95,7 @@
 
 .category-item-title {
     font-family: var(--primary-font-family);
-    font-size: 32px;
+    font-size: 20px;
     font-weight: 400;
     color: var(--white-color);
     margin: 0 0 10px 0;
@@ -106,7 +106,7 @@
 
 .category-item-description {
     font-family: var(--primary-font-family);
-    font-size: 13px;
+    font-size: 10px;
     font-weight: 400;
     color: var(--white-color);
     margin: 0 0 4px 0;

@@ -23,7 +23,7 @@
 
 .feature-collage-title {
     font-family: var(--primary-font-family);
-    font-size: 60px;
+    font-size: 38px;
     font-weight: 400;
     color: var(--primary-color);
     margin: 0;
@@ -63,8 +63,8 @@
 /* Masonry Grid Layout for each slide */
 .feature-collage-grid {
     display: grid;
-    grid-template-columns: repeat(4, 350px);
-    grid-template-rows: repeat(2, 350px);
+    grid-template-columns: repeat(4, 250px);
+    grid-template-rows: repeat(2, 250px);
     gap: 15px;
     flex-shrink: 0;
 }

@@ -5,14 +5,14 @@
 .why-choose-section {
     position: relative;
     width: 100%;
-    min-height: 100vh;
+    min-height: 85vh;
     background-color: #F5F0EC;
 }
 
 /* Left Sidebar */
 .why-choose-sidebar {
     background-color: #4A3326;
-    width: 250px;
+    width: 110px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -25,7 +25,7 @@
 
 .why-choose-heading {
     font-family: var(--primary-font-family);
-    font-size: 54px;
+    font-size: 40px;
     font-weight: 400;
     color: var(--white-color);
     writing-mode: vertical-rl;
@@ -38,7 +38,7 @@
 /* Main Content Area */
 .why-choose-content {
     position: absolute;
-    left: 150px;
+    left: 120px;
     right: 0;
     top: 50%;
     transform: translateY(-50%);
@@ -54,14 +54,14 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
     max-width: 1000px;
-    width: 100%;
+    width: 75%;
 }
 
 /* Feature Cards */
 .feature-card {
     background-color: #E8DED5;
     border-radius: 30px;
-    padding: 50px 40px;
+    padding: 40px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -85,15 +85,15 @@
 }
 
 .feature-icon img {
-    width: 100%;
-    height: 100%;
+    width: 80%;
+    height: 80%;
     object-fit: contain;
 }
 
 /* Feature Title */
 .feature-title {
     font-family: var(--primary-font-family);
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 500;
     color: #2C2018;
     margin: 0 0 12px 0;
@@ -103,7 +103,7 @@
 /* Feature Subtitle */
 .feature-subtitle {
     font-family: var(--primary-font-family);
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 400;
     color: #6B5A4D;
     margin: 0;

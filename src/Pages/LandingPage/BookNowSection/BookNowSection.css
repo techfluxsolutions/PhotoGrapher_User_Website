@@ -20,8 +20,8 @@
     background-color: rgba(245, 240, 236, 0.80);
     border-radius: 50px;
     padding: 60px 80px;
-    max-width: 900px;
-    width: 100%;
+    max-width: 800px;
+    width: 55%;
     text-align: center;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
 }
@@ -29,7 +29,7 @@
 /* Title */
 .book-now-title {
     font-family: var(--primary-font-family);
-    font-size: 52px;
+    font-size: 40px;
     font-weight: 500;
     color: var(--primary-color);
     margin: 0 0 20px 0;
@@ -39,7 +39,7 @@
 /* Subtitle */
 .book-now-subtitle {
     font-family: var(--primary-font-family);
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 400;
     color: 000;
     margin: 0 0 40px 0;
@@ -57,7 +57,7 @@
 /* Book Now Button - Filled */
 .btn-book-now {
     font-family: var(--primary-font-family);
-    font-size: 18px;
+    font-size: 15px;
     font-weight: 500;
     color: var(--white-color);
     background-color: #4A3326;
@@ -77,7 +77,7 @@
 /* Contact Support Button - Outlined */
 .btn-contact-support {
     font-family: var(--primary-font-family);
-    font-size: 18px;
+    font-size: 17px;
     font-weight: 500;
     color: #4A3326;
     background-color: transparent;
