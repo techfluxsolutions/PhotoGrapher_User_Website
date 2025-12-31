@@ -3,8 +3,8 @@
 ================================ */
 
 :root {
-    /* Button */
-  --primary-color:#4A3326;
+  /* Button */
+  --primary-color: #4A3326;
 
 
   /* Section background */
@@ -19,7 +19,7 @@
   --secondary-font-family: "Cinzel";
   --tertiary-font-family: "Poppins";
 
-  
+
   --border-radius: 4px;
 }
 

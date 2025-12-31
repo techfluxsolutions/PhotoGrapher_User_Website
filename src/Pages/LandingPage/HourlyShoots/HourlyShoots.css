@@ -1,0 +1,156 @@
+/* ================================
+   HOURLY SHOOTS SECTION
+================================ */
+
+.hourly-shoots-section {
+    width: 100%;
+    min-height: 500px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 40px;
+}
+
+.hourly-shoots-content {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+/* Header with dark brown rounded background */
+.hourly-shoots-header {
+    background-color: rgba(74, 51, 38, 0.75);
+    padding: 20px 60px;
+    border-radius: 15px;
+}
+
+.hourly-shoots-title {
+    font-family: var(--primary-font-family);
+    font-size: 48px;
+    font-weight: 400;
+    color: var(--white-color);
+    margin: 0;
+    text-align: center;
+}
+
+/* Cards container */
+.hourly-shoots-cards {
+    display: flex;
+    gap: 60px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Individual hour cards */
+.hourly-card {
+    background-color: var(--white-color);
+    padding: 80px 120px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 220px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.hourly-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.hourly-card-hours {
+    font-family: var(--primary-font-family);
+    font-size: 90px;
+    font-weight: 400;
+    color: var(--primary-color);
+    margin: 0 0 5px 0;
+    line-height: 1;
+}
+
+.hourly-card-label {
+    font-family: var(--primary-font-family);
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--text-color);
+    margin: 0;
+}
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 992px) {
+    .hourly-shoots-title {
+        font-size: 40px;
+    }
+
+    .hourly-card-hours {
+        font-size: 60px;
+    }
+
+    .hourly-card-label {
+        font-size: 20px;
+    }
+
+    .hourly-card {
+        padding: 40px 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hourly-shoots-section {
+        padding: 60px 20px;
+    }
+
+    .hourly-shoots-title {
+        font-size: 32px;
+    }
+
+    .hourly-shoots-header {
+        padding: 15px 40px;
+    }
+
+    .hourly-shoots-cards {
+        gap: 20px;
+    }
+
+    .hourly-card {
+        padding: 35px 45px;
+        min-width: 150px;
+    }
+
+    .hourly-card-hours {
+        font-size: 50px;
+    }
+
+    .hourly-card-label {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hourly-shoots-title {
+        font-size: 28px;
+    }
+
+    .hourly-card {
+        padding: 30px 40px;
+    }
+
+    .hourly-card-hours {
+        font-size: 48px;
+    }
+
+    .hourly-card-label {
+        font-size: 16px;
+    }
+}

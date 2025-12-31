@@ -3,7 +3,7 @@
   top: 0;
   left: 0;
   right: 0;
-  background-color: transparent;
+  background-color: var(--white-color);
   height: 70px;
   overflow: visible;
   z-index: 1000;

@@ -2,24 +2,47 @@ import React from 'react';
 import './HeroSection.css';
 
 const HeroSection = () => {
-  const heroStyle = {
-    backgroundImage: `url(${process.env.PUBLIC_URL}/asset/landing-page/hero-bg.png)`
-  };
-
   return (
-    <section className="hero-section" style={heroStyle}>
+    <section className="hero-section">
       <div className="hero-content-wrapper">
+        {/* Left Side - Text Content */}
         <div className="hero-text-container">
           <h1 className="hero-title">
-            One-Stop<br />
-            Photography Studio
+            One-Stop Photography Studio
           </h1>
           <p className="hero-subtitle">
             Tap. Book. Shoot. Done. Everything delivered without the hassle.
+            Tap. Book. Shoot. Done. Everything delivered without the hassle.
+            Tap. Book. Shoot. Done. Everything delivered without the hassle.
+            Tap. Book. Shoot. Done. Everything delivered without the hassle.
           </p>
           <div className="hero-buttons">
-            <button className="btn-primary hero-btn">Get a Quote</button>
             <button className="btn-secondary hero-btn">Explore Services</button>
+            <button className="btn-primary hero-btn">Get a Quote</button>
+          </div>
+        </div>
+
+        {/* Right Side - Image Collage */}
+        <div className="hero-images-container">
+          <div className="hero-image-large">
+            <img
+              src={`${process.env.PUBLIC_URL}/asset/landing-page/hero1.png`}
+              alt="Camera"
+            />
+          </div>
+          <div className="hero-image-small-group">
+            <div className="hero-image-small">
+              <img
+                src={`${process.env.PUBLIC_URL}/asset/landing-page/hro2.png`}
+                alt="Photography Equipment"
+              />
+            </div>
+            <div className="hero-image-small">
+              <img
+                src={`${process.env.PUBLIC_URL}/asset/landing-page/hero3.png`}
+                alt="Camera Lens"
+              />
+            </div>
           </div>
         </div>
       </div>

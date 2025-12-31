@@ -5,16 +5,11 @@
 .hero-section {
     position: relative;
     min-height: 100vh;
-    /* Full viewport height */
     margin-top: -70px;
     /* Pull up to account for navbar in flow */
     padding-top: 70px;
     /* Push content back down */
-    background-color: var(--secondary-color);
-    background-position: right center;
-    background-repeat: no-repeat;
-    background-size: auto 100%;
-    /* Height based sizing for better responsiveness */
+    background-color: #F5F0EC;
     display: flex;
     align-items: center;
     overflow: hidden;
@@ -23,46 +18,70 @@
 .hero-content-wrapper {
     max-width: 1400px;
     margin: 0 auto;
-    padding: 0 40px;
+    padding: 60px 60px;
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0;
 }
 
+/* Left Side - Text Content */
 .hero-text-container {
-    max-width: 600px;
+    flex: 0 0 auto;
+    max-width: 560px;
+    text-align: left;
+    background-color: var(--white-color);
+    padding: 60px 50px;
+    padding-right: 80px;
+    border-radius: 32px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    position: relative;
+    z-index: 2;
+    margin-right: -60px;
 }
 
 .hero-title {
-    font-family: var(--secondary-font-family);
-    font-size: 64px;
-    font-weight: 400;
-    line-height: 1.2;
-    color: var(--text-color);
-    margin-bottom: 20px;
+    font-family: var(--primary-font-family);
+    font-size: 72px;
+    font-weight: 500;
+    line-height: 1.1;
+    color: var(--primary-color);
+    margin: 0 0 20px 0;
+    letter-spacing: -1px;
+    text-align: left;
 }
 
 .hero-subtitle {
-    font-family: var(--tertiary-font-family);
-    font-size: 16px;
-    font-weight: 400;
-    color: #666666;
-    margin-bottom: 40px;
+    font-family: var(--primary-font-family);
+    font-size: 20px;
+    font-weight: 300;
+    color: var(--primary-color);
+    margin: 0 0 40px 0;
     line-height: 1.6;
+    text-align: left;
+    opacity: 0.7;
 }
 
 .hero-buttons {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
+    align-items: flex-start;
+    padding: 0;
+    margin: 0;
 }
 
 .hero-btn {
-    padding: 12px 28px;
-    font-size: 15px;
+    padding: 20px 48px;
+    font-size: 22px;
     font-family: var(--tertiary-font-family);
     font-weight: 500;
-    border-radius: var(--border-radius);
+    border-radius: 16px;
     cursor: pointer;
     transition: all 0.3s ease;
+    border: none;
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
 }
 
 .btn-primary {
@@ -72,89 +91,169 @@
 }
 
 .btn-primary:hover {
-    background-color: #3a0c0c;
+    background-color: #3d2a1f;
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(75, 15, 15, 0.3);
+    box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.2);
 }
 
 .btn-secondary {
     background-color: var(--white-color);
-    color: var(--text-color);
-    border: 2px solid var(--text-color);
+    color: var(--primary-color);
+    border: none;
 }
 
 .btn-secondary:hover {
-    background-color: var(--text-color);
-    color: var(--white-color);
+    background-color: #ECECEC;
+    color: var(--text-color);
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Right Side - Image Collage */
+.hero-images-container {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 550px;
+    position: relative;
+}
+
+.hero-image-large {
+    width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.hero-image-large img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.hero-image-small-group {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.hero-image-small {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.hero-image-small img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
 }
 
 /* ================================
    RESPONSIVE
 ================================ */
 
+@media (max-width: 1200px) {
+    .hero-content-wrapper {
+        gap: 50px;
+        padding: 50px 50px;
+    }
+
+    .hero-title {
+        font-size: 60px;
+    }
+
+    .hero-images-container {
+        max-width: 450px;
+    }
+}
+
 @media (max-width: 992px) {
-    .hero-section {
-        background-size: 50%;
-        background-position: right bottom;
+    .hero-content-wrapper {
+        flex-direction: column;
+        gap: 40px;
+        padding: 40px 40px;
+    }
+
+    .hero-text-container {
+        max-width: 100%;
+        text-align: center;
+        padding: 50px 40px;
     }
 
     .hero-title {
         font-size: 48px;
     }
 
-    .hero-text-container {
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-images-container {
         max-width: 500px;
+        width: 100%;
     }
 }
 
 @media (max-width: 768px) {
     .hero-section {
-        min-height: 600px;
-        background-size: 60%;
+        min-height: auto;
     }
 
     .hero-content-wrapper {
-        padding: 0 24px;
+        padding: 30px 24px;
     }
 
     .hero-title {
         font-size: 40px;
     }
 
+    .hero-text-container {
+        padding: 40px 30px;
+    }
+
     .hero-subtitle {
-        font-size: 14px;
+        font-size: 16px;
     }
 
     .hero-buttons {
         flex-direction: column;
+        width: 100%;
     }
 
     .hero-btn {
         width: 100%;
         max-width: 300px;
     }
+
+    .hero-images-container {
+        max-width: 100%;
+    }
 }
 
 @media (max-width: 576px) {
-    .hero-section {
-        min-height: 500px;
-        background-size: 70%;
-        background-position: right bottom;
-    }
-
     .hero-title {
         font-size: 32px;
     }
 
+    .hero-text-container {
+        padding: 30px 24px;
+    }
+
     .hero-subtitle {
-        font-size: 13px;
+        font-size: 14px;
         margin-bottom: 30px;
     }
 
     .hero-btn {
-        padding: 12px 24px;
-        font-size: 14px;
+        padding: 16px 32px;
+        font-size: 18px;
+    }
+
+    .hero-image-small-group {
+        gap: 15px;
     }
 }
