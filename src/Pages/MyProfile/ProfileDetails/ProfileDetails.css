@@ -1,0 +1,95 @@
+/* Wrapper */
+.profile-wrapper {
+  background-color: var(--secondary-color);
+  padding: 40px 0;
+}
+
+/* Title */
+.profile-title {
+  text-align: left;
+}
+
+.profile-subtitle {
+  font-size: 16px;
+  color: rgba(var(--primary-color-rgb), 0.7);
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+/* Card */
+.profile-card {
+  background-color: transparent;
+  padding: 20px 0;
+}
+
+/* Profile image */
+.profile-image {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Greeting */
+.profile-greeting {
+  font-size: 28px;
+  font-weight: 500;
+  color: var(--primary-color);
+  margin: 0;
+}
+
+/* Button */
+.edit-profile-btn {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.edit-icon {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+}
+
+
+/* Tablet */
+@media (max-width: 768px) {
+  .profile-title {
+    font-size: 30px;
+    text-align: center;
+  }
+.profile-subtitle {
+  text-align: center;
+}
+  .profile-greeting {
+    font-size: 24px;
+  }
+
+  .edit-profile-btn {
+    margin-top: 20px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .profile-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .profile-image {
+    width: 75px;
+    height: 75px;
+  }
+
+  .profile-greeting {
+    font-size: 22px;
+  }
+
+  .edit-profile-btn {
+    width: 100%;
+    text-align: center;
+  }
+}

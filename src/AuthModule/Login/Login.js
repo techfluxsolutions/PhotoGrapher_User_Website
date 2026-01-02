@@ -89,7 +89,7 @@ const Login = () => {
 
           {!showOtp && (
             <button
-              className="btn login-btn verify-btn"
+              className="btn buttons verify-btn"
               onClick={handleVerify}
             >
               Verify
@@ -122,7 +122,7 @@ const Login = () => {
               </div>
             </div>
 
-            <button className="btn login-btn">Login</button>
+            <button className="btn buttons">Login</button>
           </>
         )}
 

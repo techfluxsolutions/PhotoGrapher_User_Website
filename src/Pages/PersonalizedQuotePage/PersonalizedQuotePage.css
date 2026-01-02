@@ -15,7 +15,8 @@
 /* Card */
 .quote-card {
   background-color: var(--tertiary-color);
-  padding: 40px 35px;
+  /* padding: 40px 35px; */
+    padding: 60px 90px;
   border-radius: 44px;
   max-width: 950px;
 }
@@ -23,16 +24,17 @@
  display: flex;
  flex-direction: row;
  justify-content: space-between;
+ align-items: flex-end;
 }
 /* Labels */
 .center-label {
   display: block;
-  text-align: center;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 400;
-  color: var(--primary-color);
-  margin-bottom: 10px;
-}
+  /* color: var(--primary-color); */
+  color: rgba(var(--primary-color-rgb), 0.8);
+   margin-bottom: 0;        /* important */
+  text-align: left;        /* FIX */}
 
 /* Inputs */
 .quote-input {
@@ -50,27 +52,45 @@
   border: 1px solid var(--primary-color);
 }
 
-/* Button */
-.save-btn {
-  background-color: var(--primary-color);
-  color: var(--white-color);
-  font-size: 16px;
-  padding: 14px;
-  border-radius: 10px;
-  border: none;
+
+
+/* Desktop input width stays */
+@media (min-width: 992px) {
+  .quote-input {
+    width: 440px !important;
+  }
 }
 
-.save-btn:hover {
-  opacity: 0.9;
+/* Tablet & Mobile */
+@media (max-width: 991px) {
+  .quote-card {
+    padding: 40px 30px;
+  }
+
+  .center-label {
+    text-align: left;
+    margin-bottom: 6px;
+  }
+
+  .buttons {
+    width: 100%;
+    font-size: 18px;
+  }
 }
 
-/* Responsive */
+/* Small mobile */
 @media (max-width: 576px) {
-  .quote-title {
-    font-size: 32px;
+  .title {
+    font-size: 26px;
   }
 
   .quote-card {
-    padding: 30px 20px;
+    padding: 25px 20px;
+    border-radius: 24px;
+  }
+
+  .quote-input {
+    height: 42px;
+    font-size: 14px;
   }
 }
