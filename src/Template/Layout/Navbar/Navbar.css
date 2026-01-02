@@ -144,12 +144,13 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 930px) {
   .navbar {
     padding: 0 20px;
   }
-
+  
   .navbar-container {
+    padding: 0 30px;
     justify-content: space-between;
   }
 

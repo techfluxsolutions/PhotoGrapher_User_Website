@@ -8,7 +8,10 @@ const HeroSection = () => {
         {/* Left Side - Text Content */}
         <div className="hero-text-container">
           <h1 className="hero-title">
-            One-Stop Photography Studio
+            <div className="hero-title-container">
+              One-Stop
+            </div>
+            Photography Studio
           </h1>
           <div className="hero-subtitle-container">
             <p className="hero-subtitle">

@@ -107,6 +107,7 @@
 
     .book-now-card {
         padding: 50px 60px;
+        width: 80%;
     }
 
     .book-now-title {
@@ -133,6 +134,7 @@
     .book-now-card {
         padding: 40px 40px;
         border-radius: 40px;
+        width: 90%;
     }
 
     .book-now-title {
