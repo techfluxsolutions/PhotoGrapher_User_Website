@@ -39,10 +39,10 @@
 .hero-title-container {
     background-color: var(--white-color);
     padding-top: 30px;
-    padding-right: 440px;
+    padding-right: 410px;
     padding-bottom: 0px;
     padding-left: 0px;
-    border-radius: 12px;
+    border-radius: 5px;
     margin-right: -240px;
     margin-bottom: 0px;
     position: relative;

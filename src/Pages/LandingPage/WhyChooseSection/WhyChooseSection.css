@@ -3,10 +3,11 @@
 ================================ */
 
 .why-choose-section {
-    position: relative;
+    display: flex;
     width: 100%;
     min-height: 85vh;
     background-color: #F5F0EC;
+    padding: 0px 0;
 }
 
 /* Left Sidebar */
@@ -17,10 +18,8 @@
     align-items: center;
     justify-content: center;
     padding: 40px 0;
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
+    flex-shrink: 0;
+    align-self: stretch;
 }
 
 .why-choose-heading {
@@ -37,18 +36,13 @@
 
 /* Main Content Area */
 .why-choose-content {
-    position: absolute;
-    left: 120px;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
+    flex: 1;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 80px 100px;
+    padding: 60px 80px;
 }
 
-/* Features Grid */
 .features-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -125,16 +119,7 @@
 }
 
 @media (max-width: 992px) {
-    .why-choose-sidebar {
-        width: 180px;
-    }
-
-    .why-choose-heading {
-        font-size: 44px;
-    }
-
     .why-choose-content {
-        left: 180px;
         padding: 50px 40px;
     }
 
@@ -160,6 +145,10 @@
         display: flex;
         /* Added to support flex-direction */
         flex-direction: column;
+        min-height: auto;
+        overflow: visible;
+        padding-top: 30px;
+        padding-bottom: 30px;
     }
 
     .why-choose-sidebar {
@@ -183,7 +172,7 @@
         left: auto;
         top: auto;
         transform: none;
-        padding: 40px 30px;
+        padding: 30px 30px;
     }
 
     .features-grid {
