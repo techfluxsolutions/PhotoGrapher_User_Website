@@ -57,13 +57,14 @@
 /* Book Now Button - Filled */
 .btn-book-now {
     font-family: var(--primary-font-family);
-    font-size: 15px;
+    font-size: 12px;
     font-weight: 500;
     color: var(--white-color);
     background-color: #4A3326;
     border: none;
-    border-radius: 15px;
-    padding: 18px 50px;
+    border-radius: 12px;
+    /* Reduced from 15px */
+    padding: 14px 40px;
     cursor: pointer;
     transition: all 0.3s ease;
 }
@@ -77,13 +78,14 @@
 /* Contact Support Button - Outlined */
 .btn-contact-support {
     font-family: var(--primary-font-family);
-    font-size: 17px;
+    font-size: 14px;
     font-weight: 500;
     color: #4A3326;
     background-color: transparent;
     border: 2px solid #4A3326;
-    border-radius: 15px;
-    padding: 16px 50px;
+    border-radius: 12px;
+    /* Reduced from 15px */
+    padding: 13px 40px;
     cursor: pointer;
     transition: all 0.3s ease;
 }
@@ -120,8 +122,8 @@
 
     .btn-book-now,
     .btn-contact-support {
-        font-size: 16px;
-        padding: 16px 40px;
+        font-size: 13px;
+        padding: 13px 32px;
     }
 }
 
@@ -155,7 +157,7 @@
     .btn-book-now,
     .btn-contact-support {
         width: 100%;
-        padding: 16px 30px;
+        padding: 13px 24px;
     }
 }
 
@@ -175,7 +177,7 @@
 
     .btn-book-now,
     .btn-contact-support {
-        font-size: 15px;
-        padding: 14px 25px;
+        font-size: 12px;
+        padding: 11px 20px;
     }
 }
