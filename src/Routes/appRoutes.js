@@ -121,7 +121,6 @@ import InternetChecker from "./../utils/InternetChecker/InternetChecker";
 import { useEffect, useState } from "react";
 
 import Navbar from "../Template/Layout/Navbar/Navbar";
-import Footer from "../Template/Layout/Footer/Footer";
 
 import SignIn from "../AuthModule/SignIn/SignIn";
 import SignUp from "../AuthModule/SignUp/SignUp";
@@ -154,7 +153,6 @@ const Layout = ({ children }) => {
     <>
       {!shouldHideLayout && <Navbar />}
       {children}
-      {!shouldHideLayout && <Footer />}
     </>
   );
 };

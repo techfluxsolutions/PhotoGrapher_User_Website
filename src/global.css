@@ -3,9 +3,16 @@
 ================================ */
 
 :root {
+<<<<<<< HEAD
     /* Button */
   --primary-color:#4A3326;
   --primary-color-rgb: 74, 51, 38; /* #4A3326 */
+=======
+  /* Button */
+  --primary-color: #4A3326;
+
+
+>>>>>>> 6d41be67b93098d804f9e0fa606fd7f6cae07fbe
   /* Section background */
   --secondary-color: #FAF9F6;
   --tertiary-color: #e6dccf;
@@ -18,7 +25,7 @@
   --secondary-font-family: "Cinzel";
   --tertiary-font-family: "Poppins";
 
-  
+
   --border-radius: 4px;
 }
 
@@ -36,6 +43,7 @@
 body {
   font-family: var(--primary-font-family);
   color: var(--text-color);
+<<<<<<< HEAD
 }
 
 .title{
@@ -82,3 +90,6 @@ select option:hover {
     font-size: 18px;
   }
 }
+=======
+}
+>>>>>>> 6d41be67b93098d804f9e0fa606fd7f6cae07fbe
