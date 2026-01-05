@@ -1,24 +1,25 @@
 import React from "react";
 import { Tab, Tabs } from "react-bootstrap";
-import { Link } from "react-router-dom";
-import './BookingTabs.css'
+import "./BookingTabs.css";
 import UpcomingBookings from "./UpcomingBookings/UpcomingBookings";
 import PreviousBookings from "./PreviousBookings/PreviousBookings";
 
 const BookingTabs = () => {
   return (
-    <div className="container nav-container">
+    <div className="container booking-wrapper">
+      <h2 className="booking-title">Your Orders</h2>
+
       <Tabs
         defaultActiveKey="upcoming"
         transition={false}
-        id="custom-tabs"
+        id="booking-tabs"
         className="custom-tabs"
       >
         <Tab eventKey="upcoming" title="Upcoming Bookings">
-          <UpcomingBookings/>
+          <UpcomingBookings />
         </Tab>
         <Tab eventKey="previous" title="Previous Bookings">
-          <PreviousBookings/>
+          <PreviousBookings />
         </Tab>
       </Tabs>
     </div>

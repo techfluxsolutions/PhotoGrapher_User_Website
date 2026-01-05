@@ -1,64 +1,72 @@
-/* Custom Tabs Styling */
-.custom-tabs .nav-tabs {
-    border-bottom: none;
-    display: flex;
-    justify-content: start; 
-  }
-  
-  .custom-tabs .nav-link {
-    position: relative;
-    border: none;
-    background: none;
-    /* color: #a0a0a0;  */
-    font-size: 1rem;
-    font-weight: 500;
-    padding: 0.5rem 1rem;
-    transition: color 0.3s ease-in-out;
-    /* transition: color 0.3s ease-in-out; */
+/* Wrapper */
+.booking-wrapper {
+  padding-top: 20px;
+}
 
+/* Title */
+.booking-title {
+  font-family: "Georgia", serif;
+  font-size: 24px;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+/* Tabs container */
+.custom-tabs .nav-tabs {
+  border-bottom: 1px solid #4a3326;
+ 
+}
+.nav-tabs {
+ gap: 40px !important;
+ margin-bottom: 50px !important;
+}
+/* Tab text */
+.custom-tabs .nav-link {
+  border: none !important;
+  background: transparent !important;
+  padding: 0 0 10px 0;
+  font-family: "Georgia", serif;
+  font-size: 18px;
+  color: var(--primary-color);
+  position: relative;
+}
+
+/* Remove bootstrap focus */
+.custom-tabs .nav-link:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* Hover */
+.custom-tabs .nav-link:hover {
+  color: #5a3a2e;
+}
+
+/* Active tab */
+.custom-tabs .nav-link.active {
+  color: #5a3a2e;
+  font-weight: 500;
+}
+
+/* Active underline */
+.custom-tabs .nav-link.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+  height: 2px;
+  background-color: #5a3a2e;
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .custom-tabs .nav-tabs {
+    gap: 20px;
   }
-  
-  .custom-tabs .nav-link:hover {
-    color: #007bff !important;
-    text-decoration: none;
+
+  .custom-tabs .nav-link {
+    font-size: 16px;
   }
-  
-  .custom-tabs .nav-link.active {
-    color: #007bff !important; /* Active tab color */
-    font-weight: bold; /* Highlight active tab */
-  }
-  
-  .custom-tabs .nav-link.active::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 2px;
-    background-color: #007bff; /* Active tab underline color */
-    border-radius: 1px;
-    transition: width 0.3s ease-in-out;
-  }
-  
-  .custom-tabs .nav-link:not(.active)::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 1px;
-    background-color: #e0e0e0; /* Thin line under inactive tabs */
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 576px) {
-    .custom-tabs .nav-tabs {
-      flex-wrap: wrap;
-      justify-content: center; /* Center align for mobile */
-    }
-  
-    .custom-tabs .nav-link {
-      padding: 0.5rem;
-    }
-  }
-  
+}

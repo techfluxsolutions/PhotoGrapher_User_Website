@@ -131,6 +131,8 @@ import LandingPage from "../Pages/LandingPage/LandingPage";
 import PersonalizedQuotePage from "../Pages/PersonalizedQuotePage/PersonalizedQuotePage";
 import PersonalizedBudgetPage from "../Pages/PersonalizedBudgetPage/PersonalizedBudgetPage";
 import MyProfile from "../Pages/MyProfile/MyProfile";
+import BookingDetails from "../Pages/MyProfile/BookingTabs/AllBookings/BookingDetails/BookingDetails";
+import AllBookings from "../Pages/MyProfile/BookingTabs/AllBookings/AllBookings";
 
 /* ================================
    Layout Component
@@ -219,6 +221,8 @@ const AppRoutes = () => {
             <Route path="/personalizedQuotePage" element={<PersonalizedQuotePage />} />
             <Route path="/personalizedBudgetPage" element={<PersonalizedBudgetPage />} />
             <Route path="/myProfile" element={<MyProfile />} />
+            <Route path="/bookingDetails" element={<AllBookings/>} />
+
 
           </Routes>
         </Layout>

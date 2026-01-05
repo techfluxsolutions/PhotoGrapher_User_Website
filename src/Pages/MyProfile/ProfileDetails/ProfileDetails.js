@@ -26,7 +26,7 @@ const ProfileDetails = () => {
           </div>
 
           {/* Right section */}
-          <button className="btn buttons edit-profile-btn">
+          <button className="btn buttons w-50 edit-profile-btn">
             Edit Profile
             <img
                 src="/editIcon.png"

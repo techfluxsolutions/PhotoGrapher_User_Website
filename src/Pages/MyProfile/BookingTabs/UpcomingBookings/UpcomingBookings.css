@@ -1,0 +1,117 @@
+.booking-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Card */
+.booking-card {
+  background-color: var(--tertiary-color);
+  border-radius: 18px;
+  padding: 28px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+/* Left section */
+.booking-left {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.booking-title {
+  font-size: 22px;
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.booking-icon {
+  font-size: 20px;
+}
+
+.booking-date {
+  font-size: 14px;
+  color: rgba(var(--primary-color-rgb), 0.7);
+}
+
+/* Ratings */
+.booking-rating {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 6px;
+}
+
+.rating-label {
+  font-style: italic;
+  font-size: 14px;
+  color: var(--primary-color);
+}
+
+.stars {
+  color: #FFC107;
+  font-size: 18px;
+  letter-spacing: 4px;
+}
+
+/* View details */
+.view-details {
+  margin-top: 20px;
+  background: transparent;
+  border: none;
+  color: rgba(var(--primary-color-rgb), 0.6);
+  font-size: 14px;
+  cursor: pointer;
+  padding: 0;
+  width: fit-content;
+}
+
+.view-details:hover {
+  text-decoration: underline;
+}
+
+/* Right section */
+.booking-right {
+  text-align: right;
+}
+
+.status {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.status.completed {
+  color: #2e9c39;
+}
+
+.amount {
+  font-size: 18px;
+  color: var(--primary-color);
+  margin-top: 6px;
+}
+.cake-icon {
+  font-size: 20px;
+  color: var(--primary-color);
+}
+
+.stars svg {
+  color: #FFC107;
+  font-size: 18px;
+  margin-right: 4px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .booking-card {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .booking-right {
+    text-align: left;
+  }
+}
