@@ -6,7 +6,7 @@
     display: flex;
     width: 100%;
     min-height: 85vh;
-    background-color: #F5F0EC;
+    background-color: var(--secondary-color);
     padding: 0px 0;
 }
 

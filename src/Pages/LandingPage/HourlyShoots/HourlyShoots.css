@@ -5,6 +5,7 @@
 .hourly-shoots-section {
     width: 100%;
     min-height: 500px;
+    background-color: var(--secondary-color);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

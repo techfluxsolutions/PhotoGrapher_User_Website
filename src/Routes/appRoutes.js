@@ -121,6 +121,10 @@ import AllBookings from "../Pages/MyProfile/BookingTabs/AllBookings/AllBookings"
 import EditProfile from "../Pages/MyProfile/ProfileDetails/EditProfile/EditProfile";
 import RaiseQuery from "../Pages/MyProfile/BookingTabs/AllBookings/RaiseQuery/RaiseQuery";
 import RatingsAndFeedback from "../Pages/MyProfile/BookingTabs/AllBookings/RatingsAndFeedback/RatingsAndFeedback";
+import PaymentDetails from "../Pages/MyProfile/ServiceBooking/PaymentDetails/PaymentDetails";
+import PartialPayment from "../Pages/MyProfile/ServiceBooking/PartialPayment/PartialPayment";
+import FullPayment from "../Pages/MyProfile/ServiceBooking/FullPayment/FullPayment";
+import BookingSuccess from "../Pages/MyProfile/ServiceBooking/BookingSuccess/BookingSuccess";
 
 /* ================================
    Layout Component
@@ -227,7 +231,11 @@ const AppRoutes = () => {
                   <RatingsAndFeedback />
                 </ProtectedRoute>
               }
-            />
+            />            <Route path="/payment-details" element={<PaymentDetails />} />
+            <Route path="/partial-payment" element={<PartialPayment />} />
+            <Route path="/full-payment" element={<FullPayment />} />
+            <Route path="/booking-success" element={<BookingSuccess />} />
+
 
           </Routes>
         </Layout>

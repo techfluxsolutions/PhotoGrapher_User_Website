@@ -4,7 +4,7 @@
 
 .newsletter-section {
     width: 100%;
-    background-color: #F5F0EC;
+    background-color: var(--secondary-color);
     padding: 100px 40px;
     display: flex;
     align-items: center;
@@ -17,7 +17,7 @@
     width: 100%;
     text-align: center;
 }
- 
+
 /* Title */
 .newsletter-title {
     font-family: var(--primary-font-family);
