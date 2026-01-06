@@ -1,7 +1,5 @@
-// import { axiosInstance, axiosInstanceNoAuth } from './commonHeadApiLogic.js';
-import { axiosInstance, axiosInstanceNoAuth } from './commonHeadApiLogic.js';
-// import { authorizeMe } from './commonHeadApiLogic.js'; 
-import { authorizeMe } from './commonHeadApiLogic.js';
+import axios from 'axios';
+import { authorizeMe, axiosInstance, axiosInstanceNoAuth } from './commonHeadApiLogic.js';
 
 // Ensure authorization header is set before making authenticated requests
 const withAuthorization = async (apiFunction, ...args) => {
@@ -15,34 +13,57 @@ const withAuthorization = async (apiFunction, ...args) => {
   }
 };
 
-// export async function LoginAPI(data) {
-//   return withAuthorization(async () => {
-//     const response = await axiosInstanceNoAuth.post("/user/user_login_check", data);
-//     return response;
-//   });
-// }
 
+export async function getEmployerAPI(token) {
+      return withAuthorization(async () => {
 
-export async function LoginAPI(data) {
-  // return withAuthorization(async () => {
-    const response = await axiosInstanceNoAuth.post("/api/auth/login", data);
-    return response;
-  // });
-}
+  return axiosInstance.get("/api/admin/workers", {
+    headers: {
+      Authorization: `Bearer ${token}`,
+      "ngrok-skip-browser-warning": "true",    // required for ngrok
+    }
+      });
 
-export async function VerifyOTP(data) {
-  return withAuthorization(async () => {
-    const response = await axiosInstanceNoAuth.post("/api/auth/verify", data);
-    return response;
   });
 }
 
-// export async function forgotPasswordAPI(data) {
+export async function getContractorAPI(token) {
+      return withAuthorization(async () => {
+
+  return axiosInstance.get("/api/admin/workers", {
+    headers: {
+      Authorization: `Bearer ${token}`,
+      "ngrok-skip-browser-warning": "true",    // required for ngrok
+    }
+      });
+
+  });
+}
+
+
+export async function EditContractorRequestAPI(token) {
+      return withAuthorization(async () => {
+
+  return axiosInstance.patch("/api/admin/workers", {
+    headers: {
+      Authorization: `Bearer ${token}`,
+      "ngrok-skip-browser-warning": "true",    // required for ngrok
+    }
+      });
+
+  });
+}
+
+
+
+
+// export async function dashboardDataAPI() {
 //   return withAuthorization(async () => {
-//     const response = await axiosInstanceNoAuth.post("/user/user_Forgot_Password_check_api", data);
+//     const response = await axiosInstance.get("/user/get_dashboard_data_api");
 //     return response;
 //   });
 // }
+
 
 export async function createNewAccountAPI(data) {
   return withAuthorization(async () => {

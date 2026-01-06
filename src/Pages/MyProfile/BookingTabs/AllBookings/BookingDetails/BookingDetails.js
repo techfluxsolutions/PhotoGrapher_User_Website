@@ -1,12 +1,16 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./BookingDetails.css";
-import CancelBookingDetailModal from "../CancelBookingDetailModal/CancelBookingDetailModal";
+import CancelBookingDetailModal from "../CancellatonModals/CancelBookingDetailModal/CancelBookingDetailModal";
+import CancellationChargeModal from "../CancellatonModals/CancellationChargeModal/CancellationChargeModal";
+import SuccessfullyCancelledBookingModal from "../CancellatonModals/SuccessfullyCancelledBookingModal/SuccessfullyCancelledBookingModal";
+
 
 const BookingDetails = ({ onRaiseQuery, onRating }) => {
   const navigate = useNavigate();
   const [showCancelModal, setShowCancelModal] = useState(false);
-
+  const [showChargeModal, setShowChargeModal] = useState(false);
+  const [showSuccessModal, setShowSuccessModal] = useState(false);
 
   return (
     <div className="booking-details-wrapper">
@@ -81,11 +85,33 @@ const BookingDetails = ({ onRaiseQuery, onRating }) => {
 
         <p className="cancel-btn-main" onClick={() => setShowCancelModal(true)}>Cancel Booking</p>
       </div>
+      
+      {/* First Modal */}
       <CancelBookingDetailModal
-        show={showCancelModal}
-        onClose={() => setShowCancelModal(false)}
+          show={showCancelModal}
+          onClose={() => setShowCancelModal(false)}
+          onProceed={() => {
+          setShowCancelModal(false);
+          setShowChargeModal(true);
+        }}
+      />
+
+      {/* Second Modal */}
+      <CancellationChargeModal
+        show={showChargeModal}
+        onClose={() => setShowChargeModal(false)}
+        onConfirm={() => {
+          setShowChargeModal(false);
+          setShowSuccessModal(true);
+        }}
+      />
+       {/* 3️⃣ Success Modal */}
+      <SuccessfullyCancelledBookingModal
+        show={showSuccessModal}
+        onClose={() => setShowSuccessModal(false)}
       />
     </div>
+    
   );
 };
 

@@ -1,17 +1,18 @@
 import axios from "axios";
-import { decryptData } from "./CRYPTO/cryptoFunction";
+// import { decryptData } from "./CRYPTO/cryptoFunction";
+import {decryptData} from "./../CRYPTO/cryptoFunction";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import React, { useEffect } from "react";
 
 const axiosInstance = axios.create({
-  baseURL: process.env.REACT_APP_DINE_RIGHT_USER_WEBSITE_BASE_API_URL,
+  baseURL: process.env.REACT_APP_PHOTOGRAPHER_USER_WEBSITE_BASE_API_URL,
   timeout: 30000,
 });
 
 // Create a new Axios instance without setting the Authorization header
 const axiosInstanceNoAuth = axios.create({
-  baseURL: process.env.REACT_APP_DINE_RIGHT_USER_WEBSITE_BASE_API_URL,
+  baseURL: process.env.REACT_APP_PHOTOGRAPHER_USER_WEBSITE_BASE_API_URL,
   timeout: 30000,
 });
 
