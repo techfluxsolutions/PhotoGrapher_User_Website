@@ -17,10 +17,10 @@ const Footer = () => {
         <div className="footer-nav-container">
           <div className="footer-nav">
             <a href="#about" className="footer-link">About</a>
-            <a href="#features" className="footer-link">Features</a>
-            <a href="#pricing" className="footer-link">Pricing</a>
+            <a href="#features" className="footer-link">About Us</a>
+            <a href="#pricing" className="footer-link">Packages</a>
             <a href="#gallery" className="footer-link">Gallery</a>
-            <a href="#join" className="footer-link">Join as Team</a>
+            {/* <a href="#join" className="footer-link">Join as Team</a>   */}
           </div>
           <div className="footer-divider"></div>
           <div className="footer-sub-nav">
