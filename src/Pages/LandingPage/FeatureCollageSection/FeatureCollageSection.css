@@ -128,7 +128,7 @@
     }
 
     .feature-collage-grid {
-        grid-template-columns: repeat(4, 160px);
+        grid-template-columns: repeat(4, 280px);
         grid-template-rows: repeat(2, 280px);
         gap: 12px;
     }
@@ -149,8 +149,8 @@
     }
 
     .feature-collage-grid {
-        grid-template-columns: repeat(4, 140px);
-        grid-template-rows: repeat(2, 240px);
+        grid-template-columns: repeat(4, 250px);
+        grid-template-rows: repeat(2, 250px);
         gap: 10px;
     }
 
@@ -175,24 +175,9 @@
     }
 
     .feature-collage-grid {
-        grid-template-columns: repeat(2, 150px);
-        grid-template-rows: repeat(3, 200px);
+        grid-template-columns: repeat(4, 250px);
+        grid-template-rows: repeat(2, 250px);
         gap: 10px;
-    }
-
-    /* Adjust grid positions for mobile 2-column layout */
-    .large-left,
-    .large-center {
-        grid-column: span 1;
-        grid-row: span 1;
-    }
-
-    .small-top-right,
-    .small-bottom-right,
-    .small-top-far-right,
-    .small-bottom-far-right {
-        grid-column: span 1;
-        grid-row: span 1;
     }
 
     .feature-collage-track {
@@ -207,20 +192,10 @@
     }
 
     .feature-collage-grid {
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(6, 180px);
+        grid-template-columns: repeat(4, 240px);
+        grid-template-rows: repeat(2, 250px);
         gap: 8px;
-        width: 280px;
-    }
-
-    .large-left,
-    .large-center,
-    .small-top-right,
-    .small-bottom-right,
-    .small-top-far-right,
-    .small-bottom-far-right {
-        grid-column: 1 / 2;
-        grid-row: span 1;
+        width: auto;
     }
 
     .feature-collage-track {
