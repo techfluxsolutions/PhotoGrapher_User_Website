@@ -114,7 +114,7 @@
 
 
 
-import { BrowserRouter, Route, Routes, Navigate, useLocation } from "react-router-dom";
+import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 import "./../App.css";
 import ScrollToTop from "./../utils/scrollToTop/ScrollToTop";
 import InternetChecker from "./../utils/InternetChecker/InternetChecker";
@@ -122,7 +122,6 @@ import { useEffect, useState } from "react";
 
 import Navbar from "../Template/Layout/Navbar/Navbar";
 
-import SignIn from "../AuthModule/SignIn/SignIn";
 import SignUp from "../AuthModule/SignUp/SignUp";
 import VerifyOTP from "../AuthModule/VerifyOTP/VerifyOTP";
 import Login from "../AuthModule/Login/Login";
@@ -130,8 +129,10 @@ import LandingPage from "../Pages/LandingPage/LandingPage";
 import PersonalizedQuotePage from "../Pages/PersonalizedQuotePage/PersonalizedQuotePage";
 import PersonalizedBudgetPage from "../Pages/PersonalizedBudgetPage/PersonalizedBudgetPage";
 import MyProfile from "../Pages/MyProfile/MyProfile";
-import BookingDetails from "../Pages/MyProfile/BookingTabs/AllBookings/BookingDetails/BookingDetails";
 import AllBookings from "../Pages/MyProfile/BookingTabs/AllBookings/AllBookings";
+import EditProfile from "../Pages/MyProfile/ProfileDetails/EditProfile/EditProfile";
+import RaiseQuery from "../Pages/MyProfile/BookingTabs/AllBookings/RaiseQuery/RaiseQuery";
+import RatingsAndFeedback from "../Pages/MyProfile/BookingTabs/AllBookings/RatingsAndFeedback/RatingsAndFeedback";
 
 /* ================================
    Layout Component
@@ -139,7 +140,7 @@ import AllBookings from "../Pages/MyProfile/BookingTabs/AllBookings/AllBookings"
 const Layout = ({ children }) => {
   const location = useLocation();
 
-  // Routes where Navbar & Footer should be hidden
+  // Routes where Navbar should be hidden
   const hideLayoutRoutes = [
     "/",
     "/login",
@@ -161,18 +162,7 @@ const Layout = ({ children }) => {
    App Routes
 ================================ */
 const AppRoutes = () => {
-  const [loggedIn, setLoggedIn] = useState(false);
   const [isOffline, setIsOffline] = useState(false);
-
-  /* Check login status */
-  useEffect(() => {
-    const isLoggedIn = localStorage.getItem("isLoggedIn");
-    const encryptedToken = localStorage.getItem("token");
-
-    if (isLoggedIn === "true" && encryptedToken) {
-      setLoggedIn(true);
-    }
-  }, []);
 
   /* Internet checker */
   useEffect(() => {
@@ -197,29 +187,21 @@ const AppRoutes = () => {
 
         <Layout>
           <Routes>
-            {/* Redirect logged-in users */}
-            {loggedIn && (
-              <>
-                <Route path="/" element={<Navigate to="/user/dashboard" />} />
-                <Route path="/user/forgot_password" element={<Navigate to="/user/dashboard" />} />
-                <Route path="/user/create_new_account" element={<Navigate to="/user/dashboard" />} />
-                <Route path="/user/complete_profile" element={<Navigate to="/user/dashboard" />} />
-                <Route path="/user/reset_password" element={<Navigate to="/user/dashboard" />} />
-              </>
-            )}
 
-            {/* Auth Routes (NO Navbar & Footer) */}
-            <Route path="/" element={<SignIn />} />
+            {/* Auth Routes (NO Navbar) */}
             <Route path="/login" element={<Login />} />
             <Route path="/sign-up" element={<SignUp />} />
             <Route path="/verify-otp" element={<VerifyOTP />} />
 
-            {/* Normal Pages (WITH Navbar & Footer) */}
-            <Route path="/landingPage" element={<LandingPage />} />
+            {/* Public / Normal Pages */}
+            <Route path="/" element={<LandingPage />} />
             <Route path="/personalizedQuotePage" element={<PersonalizedQuotePage />} />
             <Route path="/personalizedBudgetPage" element={<PersonalizedBudgetPage />} />
             <Route path="/myProfile" element={<MyProfile />} />
-            <Route path="/bookingDetails" element={<AllBookings/>} />
+            <Route path="/bookingDetails" element={<AllBookings />} />
+            <Route path="/editProfile" element={<EditProfile />} />
+            <Route path="/raiseQuery" element={<RaiseQuery />} />
+            <Route path="/ratingsAndFeedback" element={<RatingsAndFeedback />} />
 
 
           </Routes>

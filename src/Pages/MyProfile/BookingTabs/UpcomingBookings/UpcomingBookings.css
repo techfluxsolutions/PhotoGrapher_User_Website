@@ -21,7 +21,7 @@
   gap: 10px;
 }
 
-.booking-title {
+.booking-title-upcoming {
   font-size: 22px;
   color: var(--primary-color);
   display: flex;
@@ -60,10 +60,10 @@
 
 /* View details */
 .view-details {
-  margin-top: 20px;
+  /* margin-top: 20px; */
   background: transparent;
   border: none;
-  color: rgba(var(--primary-color-rgb), 0.6);
+  color: var(--primary-color-rgb);
   font-size: 14px;
   cursor: pointer;
   padding: 0;
@@ -103,15 +103,46 @@
   font-size: 18px;
   margin-right: 4px;
 }
+/* Actions */
+.booking-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-top: 18px;
+}
+
+/* Modify button */
+.modify-btn {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  border: none;
+  padding: 8px 18px;
+  font-size: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.modify-btn:hover {
+  opacity: 0.9;
+}
+
 
 /* Mobile Responsive */
+/* Mobile reorder */
 @media (max-width: 768px) {
   .booking-card {
+    display: flex;
     flex-direction: column;
-    gap: 20px;
   }
 
   .booking-right {
-    text-align: left;
+    order: 1;
+    margin-bottom: 10px;
+  }
+
+  .booking-actions {
+    order: 2;
+    margin-top: 10px;
   }
 }
+

@@ -46,7 +46,7 @@ const UpcomingBookings = () => {
       {bookings.map((booking) => (
         <div className="booking-card" key={booking.id}>
           <div className="booking-left">
-            <h3 className="booking-title">
+            <h3 className="booking-title-upcoming">
               <LuCake className="cake-icon" />
               {booking.title}
             </h3>
@@ -64,12 +64,17 @@ const UpcomingBookings = () => {
               </div>
             </div>
 
-            <button
-              className="view-details"
-              onClick={() => handleViewDetails(booking.id)}
-            >
-              View Details
-            </button>
+           <div className="booking-actions">
+              <button className="modify-btn">Modify</button>
+
+              <button
+                className="view-details"
+                onClick={() => handleViewDetails(booking.id)}
+              >
+                View Details
+              </button>
+            </div>
+
           </div>
 
           <div className="booking-right">

@@ -5,11 +5,12 @@
 
 /* Title */
 .booking-title {
-  font-family: "Georgia", serif;
-  font-size: 24px;
+  /* font-family: "Georgia", serif; */
+  font-size: 30px;
   color: var(--primary-color);
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   text-align: left;
+  font-weight: 700;
 }
 
 /* Tabs container */
