@@ -142,7 +142,6 @@ const Layout = ({ children }) => {
 
   // Routes where Navbar should be hidden
   const hideLayoutRoutes = [
-    "/",
     "/login",
     "/sign-up",
     "/verify-otp",
