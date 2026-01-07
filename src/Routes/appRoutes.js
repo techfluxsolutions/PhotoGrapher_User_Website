@@ -98,33 +98,43 @@
 
 
 
+import { useEffect, useState } from "react";
 import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 import "./../App.css";
-import ScrollToTop from "./../utils/scrollToTop/ScrollToTop";
 import InternetChecker from "./../utils/InternetChecker/InternetChecker";
-import { useEffect, useState } from "react";
+import ScrollToTop from "./../utils/scrollToTop/ScrollToTop";
 
 import Navbar from "../Template/Layout/Navbar/Navbar";
 import ProtectedRoute from "./ProtectedRoute";
 
 /* Auth */
+import Login from "../AuthModule/Login/Login";
 import SignUp from "../AuthModule/SignUp/SignUp";
 import VerifyOTP from "../AuthModule/VerifyOTP/VerifyOTP";
-import Login from "../AuthModule/Login/Login";
 
 /* Pages */
 import LandingPage from "../Pages/LandingPage/LandingPage";
-import PersonalizedQuotePage from "../Pages/PersonalizedQuotePage/PersonalizedQuotePage";
-import PersonalizedBudgetPage from "../Pages/PersonalizedBudgetPage/PersonalizedBudgetPage";
-import MyProfile from "../Pages/MyProfile/MyProfile";
 import AllBookings from "../Pages/MyProfile/BookingTabs/AllBookings/AllBookings";
-import EditProfile from "../Pages/MyProfile/ProfileDetails/EditProfile/EditProfile";
 import RaiseQuery from "../Pages/MyProfile/BookingTabs/AllBookings/RaiseQuery/RaiseQuery";
 import RatingsAndFeedback from "../Pages/MyProfile/BookingTabs/AllBookings/RatingsAndFeedback/RatingsAndFeedback";
-import PaymentDetails from "../Pages/MyProfile/ServiceBooking/PaymentDetails/PaymentDetails";
-import PartialPayment from "../Pages/MyProfile/ServiceBooking/PartialPayment/PartialPayment";
-import FullPayment from "../Pages/MyProfile/ServiceBooking/FullPayment/FullPayment";
-import BookingSuccess from "../Pages/MyProfile/ServiceBooking/BookingSuccess/BookingSuccess";
+import MyProfile from "../Pages/MyProfile/MyProfile";
+import EditProfile from "../Pages/MyProfile/ProfileDetails/EditProfile/EditProfile";
+import PersonalizedBudgetPage from "../Pages/PersonalizedBudgetPage/PersonalizedBudgetPage";
+import PersonalizedQuotePage from "../Pages/PersonalizedQuotePage/PersonalizedQuotePage";
+import BookingSuccess from "../Pages/ServiceBooking/BookingSuccess/BookingSuccess";
+import FullPayment from "../Pages/ServiceBooking/FullPayment/FullPayment";
+import PartialPayment from "../Pages/ServiceBooking/PartialPayment/PartialPayment";
+import PaymentDetails from "../Pages/ServiceBooking/PaymentDetails/PaymentDetails";
+import Automotive from "../Pages/ServicesPages/Automotive/Automotive";
+import Corporate from "../Pages/ServicesPages/Corporate/Corporate";
+import Event from "../Pages/ServicesPages/Event/Event";
+import Fashion from "../Pages/ServicesPages/Fashion/Fashion";
+import Food from "../Pages/ServicesPages/Food/Food";
+import MaternityAndBabyShoot from "../Pages/ServicesPages/MaternityAndBabyShoot/MaternityAndBabyShoot";
+import Product from "../Pages/ServicesPages/Product/Product";
+import Sports from "../Pages/ServicesPages/Sports/Sports";
+import Wedding from "../Pages/ServicesPages/Wedding/Wedding";
+import Footer from "../Template/Layout/Footer/Footer";
 
 /* ================================
    Layout Component
@@ -144,6 +154,8 @@ const Layout = ({ children }) => {
     <>
       {!shouldHideLayout && <Navbar />}
       {children}
+      {/* Footer */}
+      {!shouldHideLayout && <Footer />}
     </>
   );
 };
@@ -231,10 +243,23 @@ const AppRoutes = () => {
                   <RatingsAndFeedback />
                 </ProtectedRoute>
               }
-            />            <Route path="/payment-details" element={<PaymentDetails />} />
+            />            
+            <Route path="/payment-details" element={<PaymentDetails />} />
             <Route path="/partial-payment" element={<PartialPayment />} />
             <Route path="/full-payment" element={<FullPayment />} />
             <Route path="/booking-success" element={<BookingSuccess />} />
+
+            <Route path="/automotive" element={<Automotive />} />
+            <Route path="/corporate" element={<Corporate />} />
+            <Route path="/event" element={<Event />} />
+            <Route path="/fashion" element={<Fashion />} />
+            <Route path="/food" element={<Food />} />
+            <Route path="/maternity" element={<MaternityAndBabyShoot />} />
+            <Route path="/product" element={<Product />} />
+            <Route path="/sports" element={<Sports />} />
+            <Route path="/wedding" element={<Wedding />} />
+            
+
 
 
           </Routes>

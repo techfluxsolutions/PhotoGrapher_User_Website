@@ -7,7 +7,7 @@ import FeatureCollageSection from './FeatureCollageSection/FeatureCollageSection
 import TestimonialsSection from './TestimonialsSection/TestimonialsSection';
 import BookNowSection from './BookNowSection/BookNowSection';
 import NewsletterSection from './NewsletterSection/NewsletterSection';
-import Footer from './Footer/Footer';
+// import Footer from './Footer/Footer';
 
 const LandingPage = () => {
   return (
@@ -20,7 +20,7 @@ const LandingPage = () => {
       <TestimonialsSection />
       <BookNowSection />
       <NewsletterSection />
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };

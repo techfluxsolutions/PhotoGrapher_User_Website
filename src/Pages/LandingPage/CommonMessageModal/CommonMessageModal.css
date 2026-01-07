@@ -1,0 +1,33 @@
+.common-message-modal {
+  background-color: var(--secondary-color);
+  padding: 32px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.modal-title {
+  color: var(--primary-color);
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.modal-message {
+  color: var(--primary-color);
+  font-size: 16px;
+  margin-bottom: 24px;
+}
+
+.modal-btn {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  border: none;
+  padding: 10px 26px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.modal-btn:hover {
+  opacity: 0.9;
+}

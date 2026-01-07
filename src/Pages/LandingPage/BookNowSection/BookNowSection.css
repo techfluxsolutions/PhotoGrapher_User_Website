@@ -18,7 +18,7 @@
 
 /* Centered Card */
 .book-now-card {
-    background-color: rgba(245, 240, 236, 0.80);
+    background-color: rgba(245, 240, 236, 0.90);
     border-radius: 50px;
     padding: 60px 80px;
     max-width: 800px;
@@ -29,7 +29,7 @@
 
 /* Title */
 .book-now-title {
-    font-family: var(--primary-font-family);
+    /* font-family: var(--primary-font-family); */
     font-size: 40px;
     font-weight: 500;
     color: var(--primary-color);
@@ -39,7 +39,7 @@
 
 /* Subtitle */
 .book-now-subtitle {
-    font-family: var(--primary-font-family);
+    /* font-family: var(--primary-font-family); */
     font-size: 16px;
     font-weight: 400;
     color: 000;
@@ -57,7 +57,7 @@
 
 /* Book Now Button - Filled */
 .btn-book-now {
-    font-family: var(--primary-font-family);
+    /* font-family: var(--primary-font-family); */
     font-size: 12px;
     font-weight: 500;
     color: var(--white-color);
@@ -78,7 +78,7 @@
 
 /* Contact Support Button - Outlined */
 .btn-contact-support {
-    font-family: var(--primary-font-family);
+    /* font-family: var(--primary-font-family); */
     font-size: 14px;
     font-weight: 500;
     color: #4A3326;

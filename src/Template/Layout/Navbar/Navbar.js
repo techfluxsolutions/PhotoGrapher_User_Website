@@ -57,10 +57,10 @@
 
 
 
-import { NavLink, useNavigate } from "react-router-dom";
-import { useState, useRef, useEffect } from "react";
-import "./Navbar.css";
+import { useEffect, useRef, useState } from "react";
 import { FaUserCircle } from "react-icons/fa";
+import { NavLink, useNavigate } from "react-router-dom";
+import "./Navbar.css";
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -131,31 +131,31 @@ const Navbar = () => {
 
             {showServicesDropdown && (
               <div className="services-dropdown">
-                <div onClick={() => handleServiceClick("/services/wedding")}>
+                <div onClick={() => handleServiceClick("/wedding")}>
                   Wedding Photography
                 </div>
-                <div onClick={() => handleServiceClick("/services/maternity")}>
+                <div onClick={() => handleServiceClick("/maternity")}>
                   Maternity & Baby Shoot
                 </div>
-                <div onClick={() => handleServiceClick("/services/event")}>
+                <div onClick={() => handleServiceClick("/event")}>
                   Event Photography
                 </div>
-                <div onClick={() => handleServiceClick("/services/fashion")}>
+                <div onClick={() => handleServiceClick("/fashion")}>
                   Fashion Photography
                 </div>
-                <div onClick={() => handleServiceClick("/services/corporate")}>
+                <div onClick={() => handleServiceClick("/corporate")}>
                   Corporate Photography
                 </div>
-                <div onClick={() => handleServiceClick("/services/sports")}>
+                <div onClick={() => handleServiceClick("/sports")}>
                   Sports Photography
                 </div>
-                <div onClick={() => handleServiceClick("/services/automotive")}>
+                <div onClick={() => handleServiceClick("/automotive")}>
                   Automotive Photography
                 </div>
-                <div onClick={() => handleServiceClick("/services/food")}>
+                <div onClick={() => handleServiceClick("/food")}>
                   Food Photography
                 </div>
-                <div onClick={() => handleServiceClick("/services/product")}>
+                <div onClick={() => handleServiceClick("/product")}>
                   Product Photography
                 </div>
               </div>

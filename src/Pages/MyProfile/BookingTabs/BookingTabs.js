@@ -6,7 +6,7 @@ import PreviousBookings from "./PreviousBookings/PreviousBookings";
 
 const BookingTabs = () => {
   return (
-    <div className="container booking-wrapper">
+    <div className="container booking-wrapper mb-5">
       <h2 className="booking-title">Your Orders</h2>
 
       <Tabs
