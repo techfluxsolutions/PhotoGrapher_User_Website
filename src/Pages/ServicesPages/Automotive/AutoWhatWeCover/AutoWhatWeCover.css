@@ -1,0 +1,119 @@
+.what-we-cover-section {
+    padding: 50px 20px 30px;
+    background-color: var(--secondary-color);
+    /* Matches global secondary color */
+    text-align: center;
+}
+
+.cover-title {
+    font-family: var(--primary-font-family);
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 60px;
+    background: linear-gradient(90deg, #4A3326, #B0795A);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+.cover-cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.cover-card {
+    background: #FFFFFF;
+    padding: 30px 20px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+    width: 250px;
+    height: 230px;
+    /* Fixed height for consistency */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cover-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.08);
+}
+
+.cover-icon-wrapper {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cover-icon {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.cover-card-title {
+    font-family: var(--primary-font-family);
+    color: #4A3326;
+    font-size: 22px;
+    line-height: 1.4;
+    font-weight: 400;
+    /* Regular weight as per SS typically (serifs look bold sometimes by default) */
+}
+
+/* Pagination */
+.pagination-dots {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 60px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background-color: #E0D6CD;
+    /* Light brownish gray */
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    background-color: #4A3326;
+}
+
+.dot:hover {
+    background-color: #B0795A;
+}
+
+@media (max-width: 900px) {
+    .what-we-cover-section {
+        padding: 40px 20px 50px;
+    }
+
+    .cover-cards-container {
+        gap: 15px;
+    }
+
+    .cover-card {
+        width: 100%;
+        max-width: 220px;
+        /* Smaller max-width for mobile */
+        height: auto;
+        padding: 10px 10px;
+    }
+
+    .cover-title {
+        font-size: 36px;
+        margin-bottom: 30px;
+    }
+}

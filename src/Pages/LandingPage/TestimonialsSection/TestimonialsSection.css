@@ -12,27 +12,37 @@
 
 /* Right Sidebar */
 .testimonials-sidebar {
-    background-color: #4A3326;
+    background-color: transparent;
+    /* Removed solid background */
     width: 110px;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 40px 0;
     order: 2;
+    /* Moved back to right */
     flex-shrink: 0;
     align-self: stretch;
 }
 
 .testimonials-heading {
     font-family: var(--primary-font-family);
-    font-size: 40px;
-    font-weight: 400;
-    color: var(--white-color);
+    font-size: 48px;
+    font-weight: 700;
+    /* Increased weight */
+    color: #4A3326;
+    /* Fallback */
     writing-mode: vertical-rl;
     text-orientation: mixed;
-    transform: rotate(180deg);
+    /* transform removed to flow Top->Bottom */
     margin: 0;
     letter-spacing: 2px;
+    background: linear-gradient(to bottom, #4A3326, #B0795A);
+    /* Gradient from AutoWhyVeroa */
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
 }
 
 /* Main Content Area */
@@ -43,6 +53,7 @@
     justify-content: center;
     padding: 60px 80px;
     order: 1;
+    /* Moved back to left */
 }
 
 
@@ -76,7 +87,7 @@
 .testimonial-card:nth-child(3) {
     grid-column: 1 / -1;
     max-width: 320px;
-    margin: 30px auto 0 auto;
+    margin: 30px 275px 0 auto;
 }
 
 .testimonial-card:hover {
@@ -192,7 +203,7 @@
         flex-direction: column;
         min-height: auto;
         overflow: visible;
-        padding-top: 40px;
+        padding-top: 5px;
         padding-bottom: 40px;
     }
 
@@ -204,12 +215,19 @@
         right: auto;
         top: auto;
         bottom: auto;
+        order: -1;
+        /* Ensure it is on top */
     }
 
     .testimonials-heading {
         writing-mode: horizontal-tb;
         transform: rotate(0deg);
         font-size: 32px;
+        background: linear-gradient(90deg, #4A3326, #B0795A);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        display: inline-block;
     }
 
     .testimonials-content {
