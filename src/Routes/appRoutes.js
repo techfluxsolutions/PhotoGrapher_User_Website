@@ -135,6 +135,7 @@ import Product from "../Pages/ServicesPages/Product/Product";
 import Sports from "../Pages/ServicesPages/Sports/Sports";
 import Wedding from "../Pages/ServicesPages/Wedding/Wedding";
 import Footer from "../Template/Layout/Footer/Footer";
+import CalenderBookingPage from "../Pages/ServiceBooking/CalenderBookingPage/CalenderBookingPage";
 
 /* ================================
    Layout Component
@@ -248,6 +249,8 @@ const AppRoutes = () => {
             <Route path="/partial-payment" element={<PartialPayment />} />
             <Route path="/full-payment" element={<FullPayment />} />
             <Route path="/booking-success" element={<BookingSuccess />} />
+            <Route path="/calenderBooking" element={<CalenderBookingPage />} />
+
 
             <Route path="/automotive" element={<Automotive />} />
             <Route path="/corporate" element={<Corporate />} />
