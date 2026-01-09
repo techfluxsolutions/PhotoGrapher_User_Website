@@ -1,106 +1,179 @@
-.calendar-page {
+/* =========================
+   GLOBAL LAYOUT
+========================= */
+
+.CalenderBooking-page {
   min-height: 100vh;
   background-color: var(--secondary-color);
-  padding: 20px;
+  padding: clamp(20px, 4vw, 50px);
 }
 
-.booking-card {
-  background-color: var(--secondary-color);
-  max-width: 1000px;
+/* Central width control */
+.CalenderBooking-container {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.booking-card h2 {
-  color: var(--primary-color);
-  font-weight: 600;
-}
-/* .calendar-box{
-    width: 500px;
-} */
-.calendar-box,
-.address-box {
-  background-color: var(--tertiary-color);
-  padding: 20px;
-  border-radius: 8px;
-}
+/* =========================
+   PAGE TITLE
+========================= */
 
-.calendar-month {
+.CalenderBooking-page-title {
   text-align: center;
+  font-size: clamp(22px, 4vw, 36px);
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: clamp(24px, 5vw, 50px);
+}
+
+/* =========================
+   SECTION GRID
+========================= */
+
+.CalenderBooking-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: clamp(20px, 4vw, 50px);
+  align-items: start;
+}
+
+/* =========================
+   SECTION HEADINGS
+========================= */
+
+.CalenderBooking-section-title {
+  font-size: clamp(18px, 2.5vw, 22px);
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+/* =========================
+   CARD BASE
+========================= */
+
+.CalenderBooking-calendar-box,
+.CalenderBooking-address-box {
+  background-color: var(--tertiary-color);
+  padding: clamp(18px, 4vw, 30px);
+  border-radius: 14px;
+  width: 100%;
+}
+
+/* =========================
+   CALENDAR
+========================= */
+
+.CalenderBooking-calendar-month {
+  text-align: center;
+  font-size: clamp(18px, 3vw, 22px);
   font-weight: 600;
   margin-bottom: 20px;
-  font-size: 22px;
 }
 
-.calendar-grid {
+.CalenderBooking-calendar-grid {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  gap: 10px;
+  gap: clamp(8px, 2vw, 16px);
   text-align: center;
 }
 
-.calendar-day {
-  font-size: 16px;
-  font-weight: 400;
-  color: var(--text-color);
+.CalenderBooking-calendar-day {
+  font-size: clamp(11px, 1.8vw, 13px);
+  font-weight: 500;
 }
 
-.calendar-date {
-  font-size: 15px;
-  padding: 8px 0;
+.CalenderBooking-calendar-date {
+  width: clamp(30px, 5vw, 38px);
+  height: clamp(30px, 5vw, 38px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(12px, 2vw, 15px);
   cursor: pointer;
+}
+
+.CalenderBooking-calendar-date.active {
+  background-color: var(--primary-color);
+  color: var(--white-color);
   border-radius: 50%;
-  transition: 0.3s;
 }
 
-.calendar-date:hover {
-  background-color: rgba(var(--primary-color-rgb), 0.2);
+/* =========================
+   ADDRESS
+========================= */
+
+.CalenderBooking-address-row {
+  display: grid;
+  grid-template-columns: minmax(120px, 180px) 1fr;
+  gap: clamp(10px, 3vw, 20px);
+  align-items: center;
+  margin-bottom: 16px;
 }
 
-.calendar-date.active {
-  background-color: var(--primary-color);
-  color: var(--white-color);
+.CalenderBooking-address-row label {
+  font-size: clamp(13px, 2vw, 15px);
+  text-align: left;
 }
 
-.address-box input {
+.CalenderBooking-address-row input {
+  height: clamp(34px, 4vw, 38px);
   width: 100%;
-  border: none;
+  border: 1px solid rgba(0,0,0,0.2);
   background-color: transparent;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-  padding: 8px 4px;
-  margin-bottom: 14px;
-  outline: none;
-  font-size: 14px;
+  border-radius: 6px;
+  padding: 0 12px;
 }
 
-.address-box input::placeholder {
-  color: rgba(0, 0, 0, 0.6);
+/* =========================
+   BUTTON SECTION
+========================= */
+
+.CalenderBooking-button-section {
+  text-align: center;
+  margin-top: clamp(30px, 6vw, 60px);
 }
 
-.book-btn {
+.CalenderBooking-book-btn {
   background-color: var(--primary-color);
   color: var(--white-color);
-  padding: 10px 40px;
-  border-radius: 6px;
+  padding: clamp(10px, 3vw, 14px) clamp(30px, 6vw, 60px);
+  border-radius: 10px;
   border: none;
+  font-size: clamp(14px, 2vw, 16px);
 }
 
-.book-btn:hover {
-  background-color: rgba(var(--primary-color-rgb), 0.9);
-  color: var(--white-color);
-}
-
-.back-link {
+.CalenderBooking-back-link {
+  margin-top: 10px;
+  font-size: clamp(12px, 2vw, 14px);
   cursor: pointer;
   color: var(--primary-color);
-  font-size: 14px;
 }
 
-/* Responsive tweaks */
-@media (max-width: 768px) {
-  .calendar-grid {
+/* =========================
+   SMALL HEIGHT DEVICES
+========================= */
+
+@media (max-height: 700px) {
+  .CalenderBooking-page {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .CalenderBooking-button-section {
+    margin-top: 30px;
+  }
+}
+
+/* =========================
+   VERY SMALL DEVICES
+========================= */
+
+@media (max-width: 360px) {
+  .CalenderBooking-calendar-grid {
     gap: 6px;
   }
 
-  .calendar-date {
-    font-size: 12px;
+  .CalenderBooking-address-row {
+    grid-template-columns: 1fr;
   }
 }

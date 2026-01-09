@@ -1,15 +1,12 @@
-// import { axiosInstance, axiosInstanceNoAuth } from './commonHeadApiLogic.js';
-import { axiosInstance, axiosInstanceNoAuth } from './commonHeadApiLogic.js';
-// import { authorizeMe } from './commonHeadApiLogic.js'; 
-import { authorizeMe } from './commonHeadApiLogic.js';
+import { authorizeMe, axiosInstance, axiosInstanceNoAuth } from "./commonHeadApiLogic";
 
-// Ensure authorization header is set before making authenticated requests
+
 const withAuthorization = async (apiFunction, ...args) => {
   try {
-    await authorizeMe(); // Ensure the Authorization header is set
+    // ensure header is set (authorizeMe returns token or null)
+    await authorizeMe();
     return await apiFunction(...args);
   } catch (error) {
-    // Handle errors as necessary
     console.error("Error in API request:", error);
     throw error;
   }
@@ -31,10 +28,10 @@ export async function LoginAPI(data) {
 }
 
 export async function VerifyOTP(data) {
-  return withAuthorization(async () => {
+  // return withAuthorization(async () => {
     const response = await axiosInstanceNoAuth.post("/api/auth/verify", data);
     return response;
-  });
+  // });
 }
 
 // export async function forgotPasswordAPI(data) {

@@ -1,15 +1,12 @@
-// import { axiosInstance, axiosInstanceNoAuth } from './commonHeadApiLogic.js';
-import { axiosInstance, axiosInstanceNoAuth } from './commonHeadApiLogic.js';
-// import { authorizeMe } from './commonHeadApiLogic.js'; 
-import { authorizeMe } from './commonHeadApiLogic.js';
+import { authorizeMe, axiosInstance } from "./commonHeadApiLogic";
 
-// Ensure authorization header is set before making authenticated requests
+
 const withAuthorization = async (apiFunction, ...args) => {
   try {
-    await authorizeMe(); // Ensure the Authorization header is set
+    // ensure header is set (authorizeMe returns token or null)
+    await authorizeMe();
     return await apiFunction(...args);
   } catch (error) {
-    // Handle errors as necessary
     console.error("Error in API request:", error);
     throw error;
   }
@@ -17,21 +14,25 @@ const withAuthorization = async (apiFunction, ...args) => {
 
 
 
-// export async function GetProfile(data) {
-//   // return withAuthorization(async () => {
-//     const response = await axiosInstanceNoAuth.get("/api/users/me", data);
-//     return response;
-//   // });
-// }
-
-
-
-
 export async function GetProfile() {
-  const response = await axiosInstanceNoAuth.get("/api/users/me");
+  return withAuthorization(async () => {
+  const response = await axiosInstance.get("/api/users/me");
   return response;
+  });
 }
 
+
+
+
+export async function editProfile(formData) {
+  return withAuthorization(async () => {
+    const response = await axiosInstance.put(
+      "/api/users/me",
+      formData
+    );
+    return response;
+  });
+}
 
 
 
