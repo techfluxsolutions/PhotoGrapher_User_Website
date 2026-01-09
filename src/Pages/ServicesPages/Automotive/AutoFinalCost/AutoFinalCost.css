@@ -1,0 +1,153 @@
+.final-cost-section {
+    padding: 50px 20px;
+    background-color: var(--secondary-color);
+    /* Global background */
+    display: flex;
+    justify-content: center;
+}
+
+.final-cost-container {
+    background-color: var(--secondary-color);
+    border: 1px solid #C4B5A8;
+    /* Light brownish border */
+    border-radius: 30px;
+    padding: 40px 60px;
+    max-width: 900px;
+    width: 100%;
+    position: relative;
+    /* To visually match the "card" look on the page background, usually it's white or same. 
+       If page is FAF9F6, maybe this is slightly different? 
+       From SS, it looks like a bordered box on the page. */
+}
+
+.final-cost-title {
+    font-family: var(--primary-font-family);
+    font-size: 36px;
+    font-weight: 500;
+    color: #4A3326;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.cost-factors-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 40px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: flex-start;
+    /* Ensure items start from left */
+    width: 100%;
+    /* Ensure it takes width to allow alignment */
+    padding: 0 20px;
+    /* Add padding to prevent edge touching */
+    box-sizing: border-box;
+}
+
+.cost-factor-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-family: var(--primary-font-family);
+    font-size: 18px;
+    color: #4A3326;
+    font-weight: 400;
+}
+
+.cost-number {
+    width: 30px;
+    height: 30px;
+    background-color: #4A3326;
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 600;
+    flex-shrink: 0;
+}
+
+/* Bottom Cards Area */
+.cost-bottom-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+}
+
+.cost-cards-row {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    width: 100%;
+}
+
+.cost-feature-card {
+    border: 1px solid #7D6E66;
+    border-radius: 15px;
+    padding: 15px 30px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    /* Gap between icon and text */
+    background-color: transparent;
+    min-width: 250px;
+    justify-content: center;
+}
+
+.cost-feature-card.full-width {
+    min-width: 300px;
+    /* Slightly wider for the bottom one */
+}
+
+.cost-card-icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+.cost-card-text {
+    font-family: var(--primary-font-family);
+    font-size: 18px;
+    color: #4A3326;
+    font-weight: 400;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .final-cost-container {
+        width: 90%;
+        max-width: 100%;
+        padding: 40px 20px;
+        box-sizing: border-box;
+    }
+
+    .cost-cards-row {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .cost-feature-card {
+        width: 100%;
+        max-width: 100%;
+        /* Ensure full fluidity up to container limit */
+        min-width: 0;
+        /* Override desktop min-width */
+        box-sizing: border-box;
+    }
+
+    .cost-feature-card.full-width {
+        min-width: 0;
+        /* Override desktop min-width */
+    }
+
+    .cost-factor-item {
+        font-size: 16px;
+    }
+}
