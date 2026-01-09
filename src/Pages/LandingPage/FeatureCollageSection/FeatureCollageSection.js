@@ -2,33 +2,24 @@ import React from 'react';
 import './FeatureCollageSection.css';
 
 const FeatureCollageSection = () => {
-  // Create grid layout structure for each slide
-  const createGridSlide = (startIndex) => {
-    const images = [
-      'feature1.png',
-      'feature2.png',
-      'feature3.png',
-      'feature4.png',
-      'feature5.png',
-      'feature6.png'
-    ];
-    
-    return [
-      { src: images[(startIndex + 0) % 6], position: 'large-left' },
-      { src: images[(startIndex + 1) % 6], position: 'small-top-right' },
-      { src: images[(startIndex + 2) % 6], position: 'large-center' },
-      { src: images[(startIndex + 3) % 6], position: 'small-top-far-right' },
-      { src: images[(startIndex + 4) % 6], position: 'small-bottom-right' },
-      { src: images[(startIndex + 5) % 6], position: 'small-bottom-far-right' }
-    ];
-  };
-
-  // Create multiple slides for infinite loop (3 copies of 6 variations)
-  const allSlides = [
-    ...Array(6).fill(0).map((_, i) => createGridSlide(i)),
-    ...Array(6).fill(0).map((_, i) => createGridSlide(i)),
-    ...Array(6).fill(0).map((_, i) => createGridSlide(i))
+  // Define source images in the specific order for the layout:
+  // 1: Tall (Left)
+  // 2: Top (Middle-Left)
+  // 3: Bottom (Middle-Left)
+  // 4: Tall (Middle-Right)
+  // 5: Top (Right)
+  // 6: Bottom (Right)
+  const featureImages = [
+    'feature1.png', // Tall
+    'feature6.png',  // Bottom Split 2
+    'feature3.png', // Bottom Split 1
+    'feature4.png', // Tall
+    'feature5.png', // Top Split 2
+    'feature2.png' // Top Split 1
   ];
+
+  // We need multiple sets for the infinite loop
+  const slides = [1, 2, 3]; 
 
   return (
     <section className="feature-collage-section">
@@ -38,16 +29,33 @@ const FeatureCollageSection = () => {
 
       <div className="feature-collage-slider">
         <div className="feature-collage-track">
-          {allSlides.map((slide, slideIndex) => (
-            <div key={slideIndex} className="feature-collage-grid">
-              {slide.map((image, imgIndex) => (
-                <div key={imgIndex} className={`collage-image ${image.position}`}>
-                  <img
-                    src={`${process.env.PUBLIC_URL}/asset/landing-page/${image.src}`}
-                    alt={`Feature ${imgIndex + 1}`}
-                  />
-                </div>
-              ))}
+          {slides.map((_, index) => (
+            <div key={index} className="feature-collage-block">
+              {/* Column 1: Tall */}
+              <div className="collage-item item-tall-1">
+                <img src={`${process.env.PUBLIC_URL}/asset/landing-page/${featureImages[0]}`} alt="Feature 1" />
+              </div>
+
+              {/* Column 2: Split */}
+              <div className="collage-item item-split-top-1">
+                <img src={`${process.env.PUBLIC_URL}/asset/landing-page/${featureImages[1]}`} alt="Feature 2" />
+              </div>
+              <div className="collage-item item-split-bottom-1">
+                <img src={`${process.env.PUBLIC_URL}/asset/landing-page/${featureImages[2]}`} alt="Feature 3" />
+              </div>
+
+              {/* Column 3: Tall */}
+              <div className="collage-item item-tall-2">
+                <img src={`${process.env.PUBLIC_URL}/asset/landing-page/${featureImages[3]}`} alt="Feature 4" />
+              </div>
+
+              {/* Column 4: Split */}
+              <div className="collage-item item-split-top-2">
+                <img src={`${process.env.PUBLIC_URL}/asset/landing-page/${featureImages[4]}`} alt="Feature 5" />
+              </div>
+              <div className="collage-item item-split-bottom-2">
+                <img src={`${process.env.PUBLIC_URL}/asset/landing-page/${featureImages[5]}`} alt="Feature 6" />
+              </div>
             </div>
           ))}
         </div>

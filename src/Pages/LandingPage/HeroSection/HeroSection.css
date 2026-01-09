@@ -1,14 +1,8 @@
-/* ================================
-   HERO SECTION
-================================ */
-
 .hero-section {
     position: relative;
     min-height: 100vh;
-    margin-top: -100px;
-    /* Pull up to account for navbar in flow */
-    padding-top: 70px;
-    /* Push content back down */
+    padding-top: 50px;
+    /* Account for fixed navbar height */
     background-color: var(--secondary-color);
     display: flex;
     align-items: center;
@@ -303,7 +297,7 @@
     }
 
     .hero-text-container {
-        padding: 30px 24px;
+        padding: 5px 24px;
     }
 
     .hero-subtitle-container {

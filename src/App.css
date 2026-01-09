@@ -1,5 +1,12 @@
+html,
+body {
+  overflow-x: hidden;
+  position: relative;
+}
+
 .App {
   text-align: center;
+  position: relative;
 }
 
 .App-logo {
@@ -32,6 +39,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
